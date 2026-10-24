@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+    width: 50%;
+    margin-left: 30%;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.topo h1 {
+    color: #062f4f;
+    font-size: 30px;
+}
+
+.topo p {
+    color: #777;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.notificacao {
+
+    margin-top: 1%;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: #062f4f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+
+.contador {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 18px;
+    height: 18px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+nav.menu-lateral {
+    width: 300px;
+    height: 100%;
+    background-color: #003554;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.prazocerto {
+    color: white;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir>i {
+    color: white;
+    cursor: pointer;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: 0.5s;
+}
+
+ul li.item-menu:hover {
+    background: #036181;
+    border-radius: 100px;
+    padding-left: 10px;
+}
+
+ul li.item-menu a {
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 35px;
+}
+
+ul li.item-menu a .icon>i {
+    font-size: 30px;
+}
+
+.lista-pacotes { display: grid; gap: 18px; }
+.pacote { border: 1px solid #dce5ea; border-radius: 16px; padding: 22px; box-shadow: 0 4px 12px #00355418; }
+.pacote h2 { color: #062f4f; font-size: 19px; margin-bottom: 8px; }
+.pacote p { color: #666; margin-bottom: 10px; }
+.pacote strong { color: #237a42; }

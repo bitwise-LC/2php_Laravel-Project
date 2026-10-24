@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('TelaDeFundo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+#formulario{
+    display: flex;
+    justify-content: center;
+}
+.login-container {
+    width: 420px;
+    background-color: #FDFBF4;
+    border-radius: 10px;
+    padding: 40px 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 20px;
+    color: #1a1a1a;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.input-box label {
+    font-weight: 600;
+    color: #333;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #b5b5b5;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.actions-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.btn {
+    flex: 1;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #003554;
+    color: #ffffff;
+}
+
+.ou {
+    text-align: center;
+    margin: 16px 0;
+    font-size: 14px;
+    color: #666666;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #333333;
+    border: 1px solid #b5b5b5;
+}
+
+button[type="submit"] {
+    color: #fff;
+    background-color: #003554;
+    padding: 10px 100px;
+    border-radius: 10px;
+}

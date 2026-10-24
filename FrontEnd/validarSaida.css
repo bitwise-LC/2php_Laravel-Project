@@ -1,0 +1,43 @@
+.input-com-icone select {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    width: 100%;
+    font: 14px Poppins;
+    color: #18354a
+}
+
+.opcoes-validade {
+    border: 1px solid #cddde3;
+    border-radius: 8px;
+    padding: 10px 13px;
+    display: grid;
+    gap: 9px;
+    font-size: 14px
+}
+
+.opcoes-validade label {
+    font-weight: 400 !important;
+    margin: 0 !important;
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.opcoes-validade input {
+    accent-color: #20845e
+}
+
+.info-produto {
+    margin-top: 24px;
+    color: #55707e;
+    font-size: 14px
+}
+
+.campos {
+    padding-top: 0 !important
+}
+
+.formulario {
+    min-height: 210px
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="fonte.css">
+</head>
+
+<body>
+
+    <main class="cadastro-container">
+        <form id="cadastro-container">
+            <h1>Faça seu cadastro</h1>
+
+            <div class="input-box">
+                <label for="empresa">Empresa</label>
+                <input id="empresa" name="empresa" type="text" placeholder="Nome da sua empresa" required>
+            </div>
+
+            <div class="input-box">
+                <label for="nome">Nome</label>
+                <input id="responsavel" name="nome" type="text" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="input-box">
+                <label for="cpf">CPF</label>
+                <input type="tel" placeholder="Por favor digite seu CPF" id="cpf"  oninput=mascara_cpf() maxlength="14">
+            </div>
+
+            <div class="input-box">
+                <label for="telefone">Telefone</label>
+                <input type="tel" placeholder="Por favor digite seu telefone" id="telefone"  oninput=mascara_telefone() maxlength="14">
+            </div>
+
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="exemplo123@gmail.com" required>
+            </div>
+
+            <div class="input-box">
+                <label for="password">Senha</label>
+                <input id="senha" name="password" type="password" placeholder="Digite sua senha" required>
+            </div>
+
+
+            <div class="actions-row">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+            <p class="ou">ou</p>
+            <div class="actions-row">
+                <a href="index.html" class="btn btn-secondary">Entrar na conta</a>
+            </div>
+        </form>
+    </main>
+    <script src="api.js"></script>
+    <script src="cadastro.js"></script>
+</body>
+
+</html>

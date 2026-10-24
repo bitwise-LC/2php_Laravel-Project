@@ -1,0 +1,318 @@
+:root {
+    --azul: #003554;
+    --fundo: #47708e;
+    --papel: #fdfbf4
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    font-family: Poppins, Arial;
+    color: var(--azul)
+}
+
+.sidebar {
+    width: 256px;
+    background: var(--azul);
+    height: 100vh;
+    position: fixed;
+    color: white;
+    padding: 25px 9px;
+    display: flex;
+    flex-direction: column
+}
+
+.sidebar h1 {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 28px 52px
+}
+
+.sidebar nav {
+    display: grid;
+    gap: 5px
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 12px 10px;
+    border-radius: 25px;
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.sidebar a.ativo,
+.sidebar a:hover {
+    background: #47708e99
+}
+
+.sidebar i {
+    font-size: 16px
+}
+
+.assistente {
+    margin-top: auto;
+    background: #47708e99;
+    border-radius: 24px;
+    padding: 15px 10px;
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    gap: 5px;
+    font-size: 10px
+}
+
+.assistente>i {
+    font-size: 38px;
+    align-self: center
+}
+
+.assistente b {
+    font-size: 12px
+}
+
+.assistente p {
+    line-height: 1.3;
+    margin: 3px 0 9px
+}
+
+.assistente button {
+    grid-column: 1/-1;
+    border: 0;
+    border-radius: 18px;
+    background: #fff;
+    color: #47708e;
+    font-size: 8px;
+    padding: 8px;
+    text-align: left
+}
+
+.assistente button i {
+    float: right;
+    background: var(--azul);
+    color: #fff;
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 9px
+}
+
+.usuario {
+    margin-top: 13px;
+    border-radius: 25px;
+    background: #47708e99;
+    padding: 13px;
+    font-size: 13px;
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.usuario .bi-chevron-down {
+    margin-left: auto
+}
+
+main {
+    min-height: 100vh;
+    margin-left: 256px;
+    padding: 52px 21px 28px;
+    position: relative
+}
+
+.notificacao {
+    position: absolute;
+    right: 24px;
+    top: 14px;
+    width: 47px;
+    height: 47px;
+    border: 0;
+    border-radius: 16px;
+    background: var(--azul);
+    color: #fff;
+    font-size: 21px;
+    box-shadow: 0 4px 4px #0004
+}
+
+.mes {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1525px;
+    margin: 0 auto 17px
+}
+
+.mes h2 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0
+}
+
+.mes button {
+    width: 66px;
+    height: 16px;
+    border: 0;
+    border-radius: 7px;
+    background: var(--papel);
+    color: var(--azul);
+    line-height: 10px
+}
+
+.calendario {
+    max-width: 1599px;
+    min-height: calc(100vh - 128px);
+    margin: auto;
+    background: var(--papel);
+    border-radius: 15px;
+    padding: 24px 65px
+}
+
+.semana,
+.dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center
+}
+
+.semana {
+    font: 600 16px Manrope;
+    margin-bottom: 18px
+}
+
+.dias {
+    grid-auto-rows: 136px
+}
+
+.dia {
+    font: 600 16px Manrope;
+    position: relative;
+    padding-top: 12px
+}
+
+.dia.outro {
+    color: #9eb3bd
+}
+
+.marcadores {
+    height: 14px;
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    justify-content: center
+}
+
+.marcador {
+    width: 12px;
+    height: 7px;
+    border-radius: 8px
+}
+
+.roxo {
+    background: #ab66ea
+}
+
+.laranja {
+    background: #f28c28
+}
+
+.azul {
+    background: #003554
+}
+
+.amarelo {
+    background: #e8ce3e
+}
+
+.escuro {
+    background: #003554
+}
+
+.hoje span {
+    display: inline-grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #b7cad2;
+    border: 1px solid #003554
+}
+
+@media(max-width:800px) {
+    .sidebar {
+        width: 70px;
+        padding: 20px 7px
+    }
+
+    .sidebar h1,
+    .sidebar a:not(.ativo)::after,
+    .sidebar a {
+        font-size: 0
+    }
+
+    .sidebar a {
+        justify-content: center
+    }
+
+    .sidebar a i {
+        font-size: 19px
+    }
+
+    .assistente,
+    .usuario {
+        display: none
+    }
+
+    main {
+        margin-left: 70px
+    }
+
+    .calendario {
+        padding: 14px
+    }
+
+    .dias {
+        grid-auto-rows: 85px
+    }
+
+    .semana,
+    .dia {
+        font-size: 12px
+    }
+}
+
+@media(max-width:520px) {
+    .sidebar {
+        display: none
+    }
+
+    main {
+        margin: 0;
+        padding: 50px 10px 10px
+    }
+
+    .calendario {
+        border-radius: 12px;
+        padding: 8px
+    }
+
+    .dias {
+        grid-auto-rows: 64px
+    }
+
+    .marcadores {
+        gap: 3px
+    }
+
+    .marcador {
+        width: 8px
+    }
+
+    .mes h2 {
+        font-size: 15px
+    }
+}

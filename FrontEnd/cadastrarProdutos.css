@@ -1,0 +1,660 @@
+:root {
+    --azul: #063a58;
+    --azul-claro: #0c6287;
+    --verde: #39a878;
+    --texto: #18354a;
+    --muted: #6d8291;
+    --linha: #dce6eb;
+    --fundo: #f5f8f9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+.menu-lateral {
+    background: var(--azul);
+    color: #e9f5f8;
+    width: 260px;
+    min-height: 100vh;
+    padding: 30px 16px 24px;
+    position: fixed;
+    inset: 0 auto 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 0 14px 43px;
+    color: white;
+    text-decoration: none;
+    font: 700 23px "Outfit", sans-serif;
+    letter-spacing: -.5px;
+}
+
+.marca-icone {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    color: var(--azul);
+    background: #bce6e1;
+    font-size: 19px;
+}
+
+nav {
+    display: grid;
+    gap: 7px;
+}
+
+.item-menu {
+    color: #bed2dc;
+    text-decoration: none;
+    min-height: 48px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 14px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.item-menu i {
+    font-size: 19px;
+    width: 20px;
+    text-align: center;
+}
+
+.item-menu:hover {
+    color: white;
+    background: #0d4d6d;
+}
+
+.ajuda {
+    margin: auto 14px 0;
+    color: #a7c3d0;
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    align-items: center;
+}
+
+main {
+    margin-left: 260px;
+    min-height: 100vh;
+}
+
+.topo {
+    height: 122px;
+    background: white;
+    border-bottom: 1px solid #e6edef;
+    padding: 28px clamp(32px, 5vw, 76px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caminho {
+    color: #8093a0;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.caminho i {
+    font-size: 9px;
+    margin: 0 8px;
+}
+
+h1,
+h2 {
+    font-family: "Outfit", sans-serif;
+}
+
+h1 {
+    font-size: 27px;
+    letter-spacing: -0.5px;
+}
+
+.notificacao {
+    border: 0;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background: #eff6f7;
+    color: var(--azul);
+    border-radius: 10px;
+    height: 41px;
+    width: 41px;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.notificacao span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    color: white;
+    background: #e55e62;
+    border: 2px solid white;
+    font: 700 10px Arial;
+    min-width: 18px;
+    height: 18px;
+    padding-top: 2px;
+    border-radius: 50%;
+}
+
+.conteudo {
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 52px 42px 46px;
+}
+
+.intro {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.intro-icone {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: #dbf1eb;
+    color: #20845e;
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+}
+
+.intro h2 {
+    font-size: 21px;
+    margin-bottom: 3px;
+}
+
+.intro p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+form {
+    background: white;
+    border: 1px solid #e4edef;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(16, 57, 76, .04);
+    overflow: hidden;
+}
+
+.formulario {
+    padding: 32px;
+}
+
+.bloco-foto {
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--linha);
+}
+
+.cabecalho-campo {
+    margin-bottom: 15px;
+}
+
+.cabecalho-campo label,
+.campo>label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.cabecalho-campo label span {
+    background: #edf3f5;
+    color: #7b8c97;
+    padding: 3px 7px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.cabecalho-campo p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.upload-area {
+    width: 100%;
+    height: 192px;
+    border: 1.5px dashed #aac5d1;
+    background: #f9fcfc;
+    cursor: pointer;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.upload-area:hover,
+.upload-area.arrastando {
+    background: #eff8f8;
+    border-color: var(--azul-claro);
+}
+
+.upload-conteudo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    color: #66808d;
+    font-size: 12px;
+    text-align: center;
+}
+
+.upload-conteudo strong {
+    font-size: 14px;
+    color: #335568;
+}
+
+.upload-conteudo em {
+    color: var(--azul-claro);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.upload-conteudo small {
+    color: #91a2ab;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.upload-icone {
+    display: grid;
+    place-items: center;
+    color: var(--azul-claro);
+    background: #e1f0f3;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.upload-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #eef3f4;
+}
+
+.remover-foto {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 0;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: white;
+    color: #d75459;
+    box-shadow: 0 2px 8px #17384c33;
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-top: 30px;
+}
+
+.campo>label {
+    display: block;
+    margin-bottom: 9px;
+}
+
+.campo label b {
+    color: #dc5256;
+}
+
+.input-com-icone {
+    height: 48px;
+    border: 1px solid #cddde3;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 13px;
+    color: #73909f;
+    transition: .2s;
+}
+
+.input-com-icone:focus-within {
+    border-color: var(--azul-claro);
+    box-shadow: 0 0 0 3px #0c628717;
+}
+
+.input-com-icone i {
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+.input-com-icone input {
+    color: var(--texto);
+    min-width: 0;
+    flex: 1;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    font: 14px "DM Sans", sans-serif;
+}
+
+.input-com-icone input::placeholder {
+    color: #9babb3;
+}
+
+.input-com-icone select {
+    color: var(--texto);
+    min-width: 0;
+    flex: 1;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    font: 14px "DM Sans", sans-serif;
+}
+
+.erro {
+    display: block;
+    min-height: 16px;
+    margin-top: 5px;
+    color: #d14a50;
+    font-size: 12px;
+}
+
+.campo.invalido .input-com-icone {
+    border-color: #dc6669;
+}
+
+.acoes {
+    background: #fbfcfc;
+    border-top: 1px solid #e6edef;
+    padding: 19px 32px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.acoes a,
+.acoes button {
+    height: 43px;
+    border-radius: 8px;
+    padding: 0 17px;
+    font: 600 14px "DM Sans", sans-serif;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    color: #55707e;
+    border: 1px solid #ccdbe1;
+    background: white;
+}
+
+.btn-salvar {
+    border: 1px solid var(--verde);
+    color: white;
+    background: var(--verde);
+    gap: 7px;
+    box-shadow: 0 3px 6px #39a8782d;
+}
+
+.btn-salvar:hover {
+    background: #2e9266;
+}
+
+.toast {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: .25s;
+    position: fixed;
+    z-index: 5;
+    bottom: 28px;
+    right: 28px;
+    color: white;
+    background: #277d5d;
+    border-radius: 9px;
+    padding: 13px 18px;
+    display: flex;
+    gap: 9px;
+    box-shadow: 0 8px 18px #12483233;
+    font-size: 14px;
+}
+
+.toast.visivel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@media (max-width: 780px) {
+    .menu-lateral {
+        width: 66px;
+        padding: 20px 8px;
+    }
+
+    .marca {
+        margin: 0 auto 35px;
+    }
+
+    .marca>span:last-child,
+    .item-menu span,
+    .ajuda span {
+        display: none;
+    }
+
+    .item-menu {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .ajuda {
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    main {
+        margin-left: 66px;
+    }
+
+    .topo {
+        padding: 25px 25px;
+    }
+
+    .conteudo {
+        padding: 36px 25px;
+    }
+
+    .campos {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-lateral {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .topo {
+        height: 105px;
+    }
+
+    .conteudo {
+        padding: 28px 16px;
+    }
+
+    .formulario {
+        padding: 22px 18px;
+    }
+
+    .acoes {
+        padding: 16px 18px;
+    }
+
+    .acoes>* {
+        flex: 1;
+    }
+
+    .intro h2 {
+        font-size: 19px;
+    }
+
+    .toast {
+        left: 16px;
+        right: 16px;
+        bottom: 18px;
+    }
+}
+
+.menu-lateral {
+    width: 300px;
+    height: 100%;
+    min-height: 0;
+    background-color: #003554;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #ffffff;
+    display: block;
+    inset: 0 auto auto 0;
+}
+
+.menu-lateral .prazocerto {
+    color: white;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.menu-lateral ul {
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-lateral ul li.item-menu {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    border-radius: 0;
+    transition: .5s;
+}
+
+.menu-lateral ul li.item-menu:hover {
+    background: #036181;
+    border-radius: 100px;
+    padding-left: 10px;
+}
+
+.menu-lateral ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+.menu-lateral ul li.item-menu a .txt-link {
+    margin-left: 35px;
+}
+
+.menu-lateral ul li.item-menu a .icon>i {
+    font-size: 30px;
+    width: auto;
+}
+
+main {
+    margin-left: 300px;
+}
+
+.notificacao {
+    margin-top: 1%;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border: 0;
+    border-radius: 10px;
+    background: #062f4f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.notificacao .contador {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 18px;
+    height: 18px;
+    min-width: 0;
+    padding: 0;
+    background: red;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: bold 11px Arial;
+}
+
+@media (max-width: 780px) {
+    .menu-lateral {
+        width: 80px;
+        padding: 25px 10px;
+    }
+
+    .menu-lateral .prazocerto,
+    .menu-lateral .txt-link {
+        display: none;
+    }
+
+    .menu-lateral ul li.item-menu a {
+        justify-content: center;
+        padding: 14px 10px;
+    }
+
+    .menu-lateral ul li.item-menu a .icon>i {
+        font-size: 24px;
+    }
+
+    main {
+        margin-left: 80px;
+    }
+}

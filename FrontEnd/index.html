@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonte.css">
+</head>
+
+<body>
+    
+    <main class="login-container">
+        <form id="login-form">
+            <h1>Faça seu login</h1>
+
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="exemplo123@gmail.com" required>
+            </div>
+
+            <div class="input-box">
+                <label for="password">Senha</label>
+                <input id="password" name="password" type="password" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="actions-row">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+            <p class="ou">ou</p>
+            <div class="actions-row">
+                <a href="cadastro.html" class="btn btn-secondary">Cadastrar</a>
+            </div>
+        </form>
+
+        
+    </main>
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
