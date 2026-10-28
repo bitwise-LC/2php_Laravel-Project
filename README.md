@@ -74,3 +74,8 @@ Os testes usam SQLite em memória e não alteram o banco MySQL. Também é poss�
 python3 -m compileall -q backend
 for arquivo in FrontEnd/*.js; do node --check "$arquivo"; done
 ```
+
+##Video 
+
+https://github.com/user-attachments/assets/807bedb9-ce83-43a2-9b0b-4b460fc319dd
+
